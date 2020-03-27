@@ -21,16 +21,23 @@ public class Interaction : MonoBehaviour
             interactionAllowed = false;
         }
     }
-    void Interact()
+    IEnumerator Interact()
     {
+        yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[i];
         i++;
         i %= 2;
+        yield break;
     }
     void Update()
     {
-        if (interactionAllowed && Input.GetKey(KeyCode.E)){
-            Interact();
+        if (interactionAllowed)
+        {
+            Debug.Log("Press E"); //TODO: make sprite what write msg on screen
+        }
+        if (interactionAllowed && Input.GetKeyDown(KeyCode.E))
+        {
+                StartCoroutine(Interact()); 
         }
     }
 }
