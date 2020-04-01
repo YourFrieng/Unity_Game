@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
+    public Collider2D DoorCollider;
     int i = 1;
     public Sprite[] sprites = new Sprite[2];
     private bool interactionAllowed;
@@ -37,7 +38,8 @@ public class Interaction : MonoBehaviour
         }
         if (interactionAllowed && Input.GetKeyDown(KeyCode.E))
         {
-                StartCoroutine(Interact()); 
+                StartCoroutine(Interact());
+                DoorCollider.enabled = !DoorCollider.enabled; // on/off door collider to enter next level
         }
     }
 }
