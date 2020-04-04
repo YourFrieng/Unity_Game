@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Interaction.cs" />
+    <Compile Include="Assets\Scripts\New_Game.cs" />
     <Compile Include="Assets\Scripts\Parlax.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Project/Unity_Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
