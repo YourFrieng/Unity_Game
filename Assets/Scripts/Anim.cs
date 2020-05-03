@@ -25,8 +25,8 @@ public class Anim : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
                 anim.SetBool("isBack", true);
-                anim.SetBool("isLeft", false);
                 anim.SetBool("isForward", false);
+                anim.SetBool("isLeft", false);
                 anim.SetBool("isRight", false);
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
