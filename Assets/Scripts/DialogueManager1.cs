@@ -10,7 +10,6 @@ public class DialogueManager1 : MonoBehaviour
     public GameObject dialogueBox;
     public Text dialogueText;
     bool n = true;//used to activate StartDialogue() function once
-    public bool colorText;
     void Start()
     {
         dialogueBox.SetActive(false);
@@ -45,16 +44,6 @@ public class DialogueManager1 : MonoBehaviour
         {
             EndDialogue();
             return;
-        }
-        if (colorText)//will be fixed then, change color of text of diffetent characters 
-        {
-            dialogueText.color = Color.white;
-            colorText = !colorText;
-        }
-        else
-        {
-            dialogueText.color = Color.red;
-            colorText = !colorText;
         }
         string sentence = sentences.Dequeue();
         StopAllCoroutines();

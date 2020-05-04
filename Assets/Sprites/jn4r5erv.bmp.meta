@@ -5,6 +5,7 @@ TextureImporter:
     21300000: jn4r5erv_0
     21300002: jn4r5erv_1
     21300004: jn4r5erv_2
+    21300006: jn4r5erv_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -95,7 +96,7 @@ TextureImporter:
         width: 34
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -115,7 +116,7 @@ TextureImporter:
         width: 38
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,13 +136,33 @@ TextureImporter:
         width: 38
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: d01fa36e592d39e4fbfc28bb25b5b6f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jn4r5erv_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 303
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3400b84c87af44fbdb8396e22150ba
       vertices: []
       indices: 
       edges: []
