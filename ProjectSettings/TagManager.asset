@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - NextLevel
+  - New_Game
   layers:
   - Default
   - TransparentFX
