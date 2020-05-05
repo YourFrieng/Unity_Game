@@ -7,4 +7,6 @@ public class Dialogue //used as a data type
 {
     [TextArea(3,10)]
     public string[] sentences;
+    public Color npcTextColor;
+    public bool[] isPlayerSentence;
 }

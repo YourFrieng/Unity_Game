@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class New_Game : MonoBehaviour
 {
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         SceneManager.LoadScene("main");
     }
