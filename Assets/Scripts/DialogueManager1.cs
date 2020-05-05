@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class DialogueManager1 : MonoBehaviour
 {
     public Queue<string> sentences;//list of future replicas
+    private Queue<bool> isPlayerSentences;
+
     public Dialogue dialogue;
     public GameObject dialogueBox;
+    public Color playerColor;
     public Text dialogueText;
     bool n = true;//used to activate StartDialogue() function once
     void Start()
     {
         dialogueBox.SetActive(false);
         sentences = new Queue<string>();
+        isPlayerSentences = new Queue<bool>();
     }
     void OnTriggerStay2D(Collider2D col)//conditions to start dialogue
     {
@@ -37,6 +41,10 @@ public class DialogueManager1 : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
+        foreach (bool b in dialogue.isPlayerSentence)
+        {
+            isPlayerSentences.Enqueue(b);
+        }
     }
     public void DisplayNextSentence()
     {
@@ -46,6 +54,7 @@ public class DialogueManager1 : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
+        dialogueText.color = isPlayerSentences.Dequeue() ? playerColor : dialogue.npcTextColor;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
