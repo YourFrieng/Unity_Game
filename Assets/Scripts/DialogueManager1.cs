@@ -8,16 +8,23 @@ public class DialogueManager1 : MonoBehaviour
     public Queue<string> sentences;//list of future replicas
     private Queue<bool> isPlayerSentences;
 
+    public GameObject Player;
+    private Controller controller;
+    private Animator anim;
     public Dialogue dialogue;
     public GameObject dialogueBox;
     public Color playerColor;
     public Text dialogueText;
     bool n = true;//used to activate StartDialogue() function once
+    public npcMovement npcMovement;
     void Start()
     {
         dialogueBox.SetActive(false);
         sentences = new Queue<string>();
         isPlayerSentences = new Queue<bool>();
+        controller = Player.GetComponent<Controller>();
+        anim = Player.GetComponent<Animator>();
+        npcMovement = GetComponent<npcMovement>();
     }
     void OnTriggerStay2D(Collider2D col)//conditions to start dialogue
     {
@@ -36,6 +43,9 @@ public class DialogueManager1 : MonoBehaviour
     }
     public void StartDialogue()
     {
+        controller.enabled = false;
+        anim.enabled = false;
+        npcMovement.moveSpeed = 0;
         dialogueBox.SetActive(true);
         foreach (string sentence in dialogue.sentences)//copy replicas from Dialogue to Queue 
         {
@@ -70,5 +80,8 @@ public class DialogueManager1 : MonoBehaviour
     void EndDialogue()
     {
         dialogueBox.SetActive(false);
+        controller.enabled = true;
+        anim.enabled = true;
+        npcMovement.moveSpeed = 20;
     }
 }
