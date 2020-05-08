@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/main.unity
     guid: 5587c11eaf191d941a2af0580687ac1c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/sosach.unity
     guid: df7ab640c23866443baa44161c036358
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: cecbda9d47c2cad48ab00bf86fce683d
   m_configObjects: {}
