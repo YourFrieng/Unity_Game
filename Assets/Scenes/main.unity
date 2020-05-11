@@ -369,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &147773662
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &250782012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6308,7 +6308,7 @@ PrefabInstance:
     - target: {fileID: 4516551336855862044, guid: 72a7932337164514b866c171f43b4b90,
         type: 3}
       propertyPath: level
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4516551336855862045, guid: 72a7932337164514b866c171f43b4b90,
         type: 3}
