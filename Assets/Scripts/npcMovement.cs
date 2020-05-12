@@ -37,42 +37,47 @@ public class npcMovement : MonoBehaviour
             {
                 case 0:
                     rb2d.velocity = new Vector2(0, moveSpeed);
-                    anim.SetBool("isForward", true);
-                    anim.SetBool("isBack", false);
+                    anim.SetBool("isUp", true);
+                    anim.SetBool("isDown", false);
                     anim.SetBool("isLeft", false);
                     anim.SetBool("isRight", false);
+                           Debug.Log("isUp");
                     break;
                 case 1:
                     rb2d.velocity = new Vector2(moveSpeed, 0);
-                    anim.SetBool("isBack", true);
-                    anim.SetBool("isForward", false);
+                    anim.SetBool("isRight", true);
+                    anim.SetBool("isDown", false);
+                    anim.SetBool("isUp", false);
                     anim.SetBool("isLeft", false);
-                    anim.SetBool("isRight", false);
+
+                          Debug.Log("isRight");
                     break;
                 case 2:
                     rb2d.velocity = new Vector2(0, -moveSpeed);
-                    anim.SetBool("isLeft", true);
-                    anim.SetBool("isForward", false);
+                    anim.SetBool("isDown", true);
+                    anim.SetBool("isUp", false);
+                    anim.SetBool("isLeft", false);
                     anim.SetBool("isRight", false);
-                    anim.SetBool("isBack", false);
+                          Debug.Log("isDown");
                     break;
                 case 3:
                     rb2d.velocity = new Vector2(-moveSpeed, 0);
-                    anim.SetBool("isRight", true);
-                    anim.SetBool("isBack", false);
-                    anim.SetBool("isForward", false);
-                    anim.SetBool("isLeft", false);
+                    anim.SetBool("isLeft", true);
+                    anim.SetBool("isUp", false);
+                    anim.SetBool("isRight", false);
+                    anim.SetBool("isDown", false);
+                        Debug.Log("isLeft");
                     break;
             }
             if (walkCounter < 0)
             {
                 waitCounter = waitTime;
                 isWalking = false;
-                anim.speed = 0;
             }
         }
         else
         {
+            anim.speed = 0;
             waitCounter -= Time.deltaTime;
             rb2d.velocity = Vector2.zero;
             if(waitCounter < 0)
@@ -87,6 +92,5 @@ public class npcMovement : MonoBehaviour
         isWalking = true;
         walkCounter = walkTime;
         anim.speed = 1;
-
     }
 }

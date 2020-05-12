@@ -18,6 +18,8 @@ public class DialogueManager1 : MonoBehaviour
     bool n = true;//used to activate StartDialogue() function once
     float speed;
     public npcMovement npcMovement;
+    Animator npcAnimation;
+    
     void Start()
     {
         dialogueBox.SetActive(false);
@@ -25,6 +27,7 @@ public class DialogueManager1 : MonoBehaviour
         isPlayerSentences = new Queue<bool>();
         controller = Player.GetComponent<Controller>();
         anim = Player.GetComponent<Animator>();
+        npcAnimation = GetComponent<Animator>();
         npcMovement = GetComponent<npcMovement>();
     }
     void OnTriggerStay2D(Collider2D col)//conditions to start dialogue
@@ -46,6 +49,7 @@ public class DialogueManager1 : MonoBehaviour
     {
         controller.enabled = false;
         anim.enabled = false;
+        npcAnimation.enabled = false;
         speed = npcMovement.moveSpeed;
         npcMovement.moveSpeed = 0;
         dialogueBox.SetActive(true);
@@ -84,6 +88,7 @@ public class DialogueManager1 : MonoBehaviour
         dialogueBox.SetActive(false);
         controller.enabled = true;
         anim.enabled = true;
+        npcAnimation.enabled = true;
         npcMovement.moveSpeed = speed;
     }
 }
