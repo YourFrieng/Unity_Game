@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Anim : MonoBehaviour
 {
+    public Sprite[] sprites = new Sprite[4];
     private Animator anim;
 
     void Start()
