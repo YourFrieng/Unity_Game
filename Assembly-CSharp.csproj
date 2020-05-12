@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\DialogueManager1.cs" />
      <Compile Include="Assets\Scripts\Interaction.cs" />
      <Compile Include="Assets\Scripts\Layer.cs" />
+     <Compile Include="Assets\Scripts\level.cs" />
      <Compile Include="Assets\Scripts\Make_sound.cs" />
      <Compile Include="Assets\Scripts\New_Game.cs" />
      <Compile Include="Assets\Scripts\npcMovement.cs" />

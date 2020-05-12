@@ -16,6 +16,7 @@ public class DialogueManager1 : MonoBehaviour
     public Color playerColor;
     public Text dialogueText;
     bool n = true;//used to activate StartDialogue() function once
+    float speed;
     public npcMovement npcMovement;
     void Start()
     {
@@ -45,6 +46,7 @@ public class DialogueManager1 : MonoBehaviour
     {
         controller.enabled = false;
         anim.enabled = false;
+        speed = npcMovement.moveSpeed;
         npcMovement.moveSpeed = 0;
         dialogueBox.SetActive(true);
         foreach (string sentence in dialogue.sentences)//copy replicas from Dialogue to Queue 
@@ -82,6 +84,6 @@ public class DialogueManager1 : MonoBehaviour
         dialogueBox.SetActive(false);
         controller.enabled = true;
         anim.enabled = true;
-        npcMovement.moveSpeed = 20;
+        npcMovement.moveSpeed = speed;
     }
 }
