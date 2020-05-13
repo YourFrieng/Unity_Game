@@ -9,5 +9,4 @@ public class Dialogue //used as a data type
     public string[] sentences;
     public Color npcTextColor;
     public bool[] isPlayerSentence;
-    public Color[] colors;
 }
