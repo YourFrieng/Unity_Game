@@ -6,6 +6,9 @@ public class npcMovement : MonoBehaviour
 {
     public float moveSpeed;
 
+    private Vector2 minWalkPoint;
+    private Vector2 maxWalkPoint;
+
     private Rigidbody2D rb2d;
 
     public bool isWalking;
@@ -17,8 +20,9 @@ public class npcMovement : MonoBehaviour
     private float waitCounter;
 
     private int walkDirection;
-
+    public Collider2D WalkArea;
     private Animator anim;
+    private bool hasWalkArea;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,6 +30,12 @@ public class npcMovement : MonoBehaviour
         walkCounter = walkTime;
         waitCounter = waitTime;
         ChooseDirection();
+        if (WalkArea != null)
+        {
+            minWalkPoint = WalkArea.bounds.min;
+            maxWalkPoint = WalkArea.bounds.max;
+            hasWalkArea = true;
+        }
     }
 
     void Update()
@@ -41,7 +51,11 @@ public class npcMovement : MonoBehaviour
                     anim.SetBool("isDown", false);
                     anim.SetBool("isLeft", false);
                     anim.SetBool("isRight", false);
-                           Debug.Log("isUp");
+                    if(hasWalkArea && (transform.position.y > maxWalkPoint.y))
+                    {
+                        waitCounter = waitTime;
+                        isWalking = false;
+                    }
                     break;
                 case 1:
                     rb2d.velocity = new Vector2(moveSpeed, 0);
@@ -49,8 +63,11 @@ public class npcMovement : MonoBehaviour
                     anim.SetBool("isDown", false);
                     anim.SetBool("isUp", false);
                     anim.SetBool("isLeft", false);
-
-                          Debug.Log("isRight");
+                    if (hasWalkArea && (transform.position.x > maxWalkPoint.x))
+                    {
+                        waitCounter = waitTime;
+                        isWalking = false;
+                    } 
                     break;
                 case 2:
                     rb2d.velocity = new Vector2(0, -moveSpeed);
@@ -58,7 +75,11 @@ public class npcMovement : MonoBehaviour
                     anim.SetBool("isUp", false);
                     anim.SetBool("isLeft", false);
                     anim.SetBool("isRight", false);
-                          Debug.Log("isDown");
+                    if (hasWalkArea && (transform.position.y < minWalkPoint.y))
+                    {
+                        waitCounter = waitTime;
+                        isWalking = false;
+                    }
                     break;
                 case 3:
                     rb2d.velocity = new Vector2(-moveSpeed, 0);
@@ -66,7 +87,11 @@ public class npcMovement : MonoBehaviour
                     anim.SetBool("isUp", false);
                     anim.SetBool("isRight", false);
                     anim.SetBool("isDown", false);
-                        Debug.Log("isLeft");
+                    if (hasWalkArea && (transform.position.x < minWalkPoint.x))
+                    {
+                        waitCounter = waitTime;
+                        isWalking = false;
+                    }
                     break;
             }
             if (walkCounter < 0)
