@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Delete soon
+    uniqueID: 1617093775
+    locked: 0
   - name: Background
     uniqueID: 2793192315
     locked: 1

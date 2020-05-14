@@ -19,7 +19,7 @@ public class DialogueManager1 : MonoBehaviour
     float speed;
     public npcMovement npcMovement;
     Animator npcAnimation;
-    
+
     void Start()
     {
         dialogueBox.SetActive(false);
@@ -74,10 +74,10 @@ public class DialogueManager1 : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-    IEnumerator TypeSentence (string sentence)// do animation of text output
+    IEnumerator TypeSentence(string sentence)// do animation of text output
     {
         dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
