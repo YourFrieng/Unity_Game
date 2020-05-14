@@ -463,10 +463,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147773661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-
   m_LocalPosition: {x: -214.65, y: -120.85, z: -0.15}
   m_LocalScale: {x: 136.79482, y: 136.79482, z: 136.79482}
-
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -512,27 +510,15 @@ MonoBehaviour:
   Player: {fileID: 1852832376}
   dialogue:
     sentences:
-    - "\u0427\u0435 \u0442\u044B \u043C\u043D\u0435 \u043F\u043E\u043A\u0443\u0448\u0430\u0442\u044C
-      \u043F\u0440\u0438\u043D\u0451\u0441?! \u0422\u044B \u0447\u0442\u043E \u2014
-      \u043C\u0443\u0434\u0430\u043A, \u0447\u0442\u043E \u043B\u0438, \u0431\u043B\u044F? "
-    - "\u0425\u0443\u043B\u0438 \u0442\u044B \u0433\u043E\u0432\u043D\u043E\u043C-\u0442\u043E
-      \u0432\u044B\u043C\u0430\u0437\u0430\u043B\u0441\u044F, \u043C\u0443\u0434\u0430\u043A,
-      \u0431\u043B\u044F\u0434\u044C?!"
-    - "\u042F \u0443\u0436 \u043F\u043E\u043A\u0443\u0448\u0430\u043B..."
-    - "\u041F\u0438\u0434\u043E\u0440\u0430\u0441, \u0431\u043B\u044F\u0434\u044C!
-      \u0421\u0443\u043A\u0430, \u0431\u043B\u044F\u0434\u044C."
-    - "\u0411\u0440\u0430\u0442\u0438\u0448\u043A\u0430, \u0442\u044B \u0447\u0442\u043E?"
-    - "\u0423\u0431\u0435\u0440\u0438 \u044D\u0442\u043E \u0433\u043E\u0432\u043D\u043E
-      \u043E\u0442\u0441\u044E\u0434\u0430, \u0431\u043B\u044F\u0434\u044C! \u0401\u0431
-      \u0442\u0432\u043E\u044E \u043C\u0430\u0442\u044C, \u0431\u043B\u044F\u0434\u044C!
-      \u0418 \u0432\u0435\u0441\u044C \u043F\u043E\u043B \u0437\u0430\u0441\u0440\u0430\u043B! "
-    - "\u041C\u0443\u0434\u0430\u043A, \u0431\u043B\u044F\u0434\u044C, \u043D\u0443
-      \u0442\u044B \u043C\u0443\u0434\u0430\u043A. \u042F \u0442\u0435\u0431\u044F
-      \u0441\u0435\u0439\u0447\u0430\u0441 \u0443\u0431\u044C\u044E \u043D\u0430\u0445\u0443\u0439,
-      \u0430 \u0442\u0435\u0431\u044F, \u0431\u043B\u044F, \u0441\u0435\u0439\u0447\u0430\u0441
-      \u0443\u0431\u044C\u044E, \u0431\u043B\u044F\u0434\u044C! "
+    - Hi
+    - You eat?
+    - Yes
+    - What??
+    - Broser? what did you mean?
+    - 'Nothing... '
+    - 
     npcTextColor: {r: 1, g: 0.15958552, b: 0.033018887, a: 1}
-    isPlayerSentence: 00000100010000
+    isPlayerSentence: 000001000100
   dialogueBox: {fileID: 250782011}
   playerColor: {r: 1, g: 1, b: 1, a: 1}
   dialogueText: {fileID: 65772674}
@@ -6325,9 +6311,7 @@ PrefabInstance:
     - target: {fileID: 4516551336855862046, guid: 72a7932337164514b866c171f43b4b90,
         type: 3}
       propertyPath: m_LocalPosition.x
-
       value: -213.6
-
       objectReference: {fileID: 0}
     - target: {fileID: 4516551336855862046, guid: 72a7932337164514b866c171f43b4b90,
         type: 3}
