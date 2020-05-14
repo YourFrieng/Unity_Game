@@ -20,30 +20,30 @@ public class Anim : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             
-            anim.SetBool("isUp", true);
-            anim.SetBool("isDown", false);
+            anim.SetBool("isForward", true);
+            anim.SetBool("isBack", false);
             anim.SetBool("isLeft", false);
             anim.SetBool("isRight", false);
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            anim.SetBool("isDown", true);
-            anim.SetBool("isUp", false);
+            anim.SetBool("isBack", true);
+            anim.SetBool("isForward", false);
             anim.SetBool("isLeft", false);
             anim.SetBool("isRight", false);
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             anim.SetBool("isLeft", true);
-            anim.SetBool("isUp", false);
+            anim.SetBool("isForward", false);
             anim.SetBool("isRight", false);
-            anim.SetBool("isDown", false);
+            anim.SetBool("isBack", false);
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             anim.SetBool("isRight", true);
-            anim.SetBool("isDown", false);
-            anim.SetBool("isUp", false);
+            anim.SetBool("isBack", false);
+            anim.SetBool("isForward", false);
             anim.SetBool("isLeft", false);
 
         }
